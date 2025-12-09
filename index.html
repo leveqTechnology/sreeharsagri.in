@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shreeharsaagritech - Under Construction</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #2d6a2d;
+    }
+    p { margin-bottom: 20px; }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .img{
+        transform: translateX(52px,20px);
+            }
+
+    .email-box {
+      margin-top: 20px;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: 2px solid #2d6a2d;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 18px;
+      border: none;
+      background: #2d6a2d;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    button:hover { background: #245724; }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .logo img {
+width: 20%;
+height: auto;
+margin-bottom: 1px;
+}
+a{
+    text-decoration: none;
+    color: #2d6a2d;
+    font-weight: bolder;
+}
+  </style>
+</head>
+<body>
+    <div class="logo"><img src="./img/logo.PNG" alt="Company Logo"></div>
+  <h1>shreeharsaagritech</h1>
+  <p>Our agriculture‑based vehicle sales platform is under construction.<br>Stay tuned for something amazing!</p>
+
+  <div class="gallery">
+    <img src="./img/img1.jpeg" alt="Tractor 1">
+    <img src="./img/img2.jpeg" alt="Tractor 2">
+    <img src="./img/img3.jpeg" alt="Farmer Vehicle">
+    dcxzc
+  </div>
+
+  <div class="email-box">
+    <p>Enter your email to get updates:</p>
+    <input type="email" id="emailInput" placeholder="Your email" />
+    <button onclick="submitEmail()">Notify Me</button>
+    <p id="responseMsg" style="margin-top:10px; color:#2d6a2d;"></p>
+  </div>
+
+  <footer>
+    © 2025 Leveq Technology — All Rights Reserved. Production by <a href="https://leveqtechnology.vercel.app/">Leveq Technology.</a> 
+  </footer>
+
+  <script>
+  function submitEmail() {
+    const email = document.getElementById("emailInput").value;
+    const msg = document.getElementById("responseMsg");
+
+    if (!email || !email.includes("@")) {
+      msg.style.color = "red";
+      msg.textContent = "Please enter a valid email address.";
+      return;
+    }
+
+    // This opens the user's email client to send you an email
+    window.location.href = "mailto:harivignesh1910@gmail.com?subject=New Signup&body=" + email;
+
+    msg.style.color = "green";
+    msg.textContent = "Thanks! Your email client will open to send the message.";
+  }
+</script>
+
+</body>
+</html>
+
+<!-- git init
+git add .
+git commit -m "Initial commit for AGRI site"
+git remote add origin shreeharsaagritech.vercel.app
+git branch -M main
+git push -u origin main
+
+ -->
